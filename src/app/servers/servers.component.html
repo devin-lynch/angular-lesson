@@ -1,3 +1,7 @@
+<!-- If you want to output something in your template/print some text to it, use STRING INTERPOLATION! -->
+<!-- If you want to change some property from an html element or a directive/component, use PROPERTY BINDING! -->
+<!-- DON'T MIX PROPERTY BINDING WITH STRING INTERPOLATION! -->
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button> <!-- Using brackets for PROPERTY BINDING instead of an attribute for 'disabled'. once allowNewServer is false (after 2000ms) the button is no longer disabled! -->
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
