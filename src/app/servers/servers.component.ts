@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   // selector: '[app-servers]',
   // selector: '.app-servers',
   selector: 'app-servers', // generally use this one for components!
-  // template:  // ALWAYS need a template/templateUrl component! 
+  // template:  // ALWAYS need a template/templateUrl component!
   //   `<app-server></app-server> serv
   //   <app-server></app-server>`,
   templateUrl: './servers.component.html',
@@ -13,8 +13,14 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer = false
 
+  serverCreationStatus = 'No server was created!'
+
   serverDelay = setTimeout(() => {
     this.allowNewServer = true;
   }, 2000)
- 
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
+  }
+
 }
