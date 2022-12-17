@@ -15,12 +15,18 @@ export class ServersComponent {
 
   serverCreationStatus = 'No server was created!'
 
+  serverName = ''
+
   serverDelay = setTimeout(() => {
     this.allowNewServer = true;
   }, 2000)
 
   onCreateServer() {
     this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServerName(event: any) {
+    this.serverName = event.target.value;
   }
 
 }
