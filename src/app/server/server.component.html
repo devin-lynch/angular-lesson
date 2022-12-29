@@ -1,5 +1,5 @@
 <p
   [ngStyle]="{backgroundColor: getColor()}"
-  [ngClass]="{online: serverStatus === 'online'}"> <!-- check style in component -->
+  [ngClass]="{online: serverStatus === 'online'}"> <!-- the KEY is the css class name while the VALUE is the condition it checks for! check style in component -->
   {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
 </p> <!-- STRING INTERPOLATION must result in a string or something that can be converted to a string easily (like a number) -->
